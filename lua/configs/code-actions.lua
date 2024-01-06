@@ -1,9 +1,11 @@
 lvim.format_on_save = true
 
-local is_prettier = true
+local is_prettier = not true
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+local linters = require "lvim.lsp.null-ls.linters"
 
 if not is_prettier then
-  local linters = require "lvim.lsp.null-ls.linters"
   linters.setup {
     {
       command = "eslint",
@@ -13,8 +15,18 @@ if not is_prettier then
         "javascript",
         "javascriptreact" } }
   }
+
+  formatters.setup {
+    {
+      command = "eslint_d",
+      filetypes = {
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "javascriptreact" },
+    },
+  }
 else
-  local formatters = require "lvim.lsp.null-ls.formatters"
   formatters.setup {
     {
       command = "prettier",
