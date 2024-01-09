@@ -1,11 +1,11 @@
 lvim.format_on_save = true
 
-local is_prettier = not true
+local is_eslint = true
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 local linters = require "lvim.lsp.null-ls.linters"
 
-if not is_prettier then
+if is_eslint then
   linters.setup {
     {
       command = "eslint",
