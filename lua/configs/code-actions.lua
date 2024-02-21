@@ -1,4 +1,5 @@
 lvim.format_on_save = true
+vim.opt.wrap = true
 
 local is_eslint = true
 
@@ -13,7 +14,10 @@ if is_eslint then
         "typescript",
         "typescriptreact",
         "javascript",
-        "javascriptreact" } }
+        "javascriptreact",
+        "vue"
+      }
+    }
   }
 
   formatters.setup {
@@ -23,8 +27,10 @@ if is_eslint then
         "typescript",
         "typescriptreact",
         "javascript",
-        "javascriptreact" },
-    },
+        "javascriptreact",
+        "vue"
+      }
+    }
   }
 else
   formatters.setup {
@@ -34,7 +40,9 @@ else
         "typescript",
         "typescriptreact",
         "javascript",
-        "javascriptreact" },
-    },
+        "javascriptreact",
+        "vue"
+      }
+    }
   }
 end

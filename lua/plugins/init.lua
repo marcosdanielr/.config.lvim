@@ -8,7 +8,9 @@ lvim.plugins = {
   },
   { "jparise/vim-graphql" },
   { "ellisonleao/gruvbox.nvim" },
-  { 'marcosdanielr/search-and-replace.nvim' }
+  { "marcosdanielr/search-and-replace.nvim" },
+  { "navarasu/onedark.nvim" },
+  { "roobert/tailwindcss-colorizer-cmp.nvim" }
 }
 
 
