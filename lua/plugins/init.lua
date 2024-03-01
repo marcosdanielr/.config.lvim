@@ -10,8 +10,10 @@ lvim.plugins = {
   { "ellisonleao/gruvbox.nvim" },
   { "marcosdanielr/search-and-replace.nvim" },
   { "navarasu/onedark.nvim" },
-  { "roobert/tailwindcss-colorizer-cmp.nvim" }
+  { "roobert/tailwindcss-colorizer-cmp.nvim" },
+  { "norcalli/nvim-colorizer.lua" }
 }
 
 
 require("search-and-replace").setup()
+require("colorizer").setup()
